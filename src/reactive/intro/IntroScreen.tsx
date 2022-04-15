@@ -12,7 +12,7 @@ const handleRotation = (progress: Animated.SharedValue<number>) => {
   return `${Math.PI * 2 * progress.value}rad`
 }
 
-export const Screen: FC = () => {
+export const IntroScreen: FC = () => {
   const progress = useSharedValue<number>(0)
 
   const reanimatedStyle = useAnimatedStyle(() => {
@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#ffffff"
+    justifyContent: "center"
   },
   box: {
     height: 100,

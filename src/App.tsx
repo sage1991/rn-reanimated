@@ -1,23 +1,16 @@
 import React, { FC } from "react"
 import { StatusBar } from "expo-status-bar"
+import { NavigationContainer } from "@react-navigation/native"
 
-import { GestureHandlerRootView } from "react-native-gesture-handler"
-import { StyleSheet } from "react-native"
-
-import { Screen } from "./reactive/intro"
+import { RootNavigation } from "./navigations"
 
 export const App: FC = () => {
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <>
       <StatusBar style="auto"/>
-      <Screen />
-    </GestureHandlerRootView>
+      <NavigationContainer>
+        <RootNavigation />
+      </NavigationContainer>
+    </>
   )
 }
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1
-  }
-})
-

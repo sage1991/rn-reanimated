@@ -5,12 +5,12 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue, withSpring,
 } from "react-native-reanimated"
-import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
+import { GestureHandlerRootView, PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
 
 const BOX_SIZE = 100
 const CIRCLE_RADIUS = Dimensions.get("window").width * 0.9
 
-export const Screen: FC = () => {
+export const GestureHandlerBasicScreen: FC = () => {
   const translateX = useSharedValue<number>(0)
   const translateY = useSharedValue<number>(0)
 
@@ -46,12 +46,12 @@ export const Screen: FC = () => {
   }, [])
 
   return (
-    <View style={styles.root}>
+    <GestureHandlerRootView style={styles.root}>
       <View style={styles.circle} />
       <PanGestureHandler onGestureEvent={gestureHandler}>
         <Animated.View style={[styles.square, animatedStyle]} />
       </PanGestureHandler>
-    </View>
+    </GestureHandlerRootView>
   )
 }
 
@@ -59,8 +59,7 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#ffffff"
+    justifyContent: "center"
   },
   square: {
     width: BOX_SIZE,
