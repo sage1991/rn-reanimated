@@ -7,7 +7,7 @@ import { RootNavigation } from "./navigations"
 export const App: FC = () => {
   return (
     <>
-      <StatusBar style="auto"/>
+      <StatusBar style="auto" />
       <NavigationContainer>
         <RootNavigation />
       </NavigationContainer>

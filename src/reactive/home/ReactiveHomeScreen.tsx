@@ -2,9 +2,13 @@ import React, { FC } from "react"
 import { Button, SafeAreaView, ScrollView, StyleSheet } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 
-import { HomeNavigationParams, ReactiveNavigationParams, RootNavigationParams } from "../../navigations"
 import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
 import { CompositeScreenProps } from "@react-navigation/native"
+import {
+  HomeNavigationParams,
+  ReactiveNavigationParams,
+  RootNavigationParams
+} from "../../navigations"
 
 type Props = CompositeScreenProps<
   BottomTabScreenProps<HomeNavigationParams, "reactive">,

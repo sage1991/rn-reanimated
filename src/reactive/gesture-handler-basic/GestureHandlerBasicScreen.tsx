@@ -3,9 +3,14 @@ import { StyleSheet, View, Dimensions } from "react-native"
 import Animated, {
   useAnimatedGestureHandler,
   useAnimatedStyle,
-  useSharedValue, withSpring,
+  useSharedValue,
+  withSpring
 } from "react-native-reanimated"
-import { GestureHandlerRootView, PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
+import {
+  GestureHandlerRootView,
+  PanGestureHandler,
+  PanGestureHandlerGestureEvent
+} from "react-native-gesture-handler"
 
 const BOX_SIZE = 100
 const CIRCLE_RADIUS = Dimensions.get("window").width * 0.9
@@ -18,7 +23,10 @@ export const GestureHandlerBasicScreen: FC = () => {
     translateX: number
     translateY: number
   }
-  const gestureHandler = useAnimatedGestureHandler<PanGestureHandlerGestureEvent, PanGestureContext>({
+  const gestureHandler = useAnimatedGestureHandler<
+    PanGestureHandlerGestureEvent,
+    PanGestureContext
+  >({
     onStart: (event, context) => {
       context.translateX = translateX.value
       context.translateY = translateY.value
@@ -28,7 +36,7 @@ export const GestureHandlerBasicScreen: FC = () => {
       translateY.value = event.translationY + context.translateY
     },
     onEnd: (event) => {
-      const distance = Math.sqrt(Math.pow(translateX.value, 2) + Math.pow(translateY.value, 2))
+      const distance = Math.sqrt(translateX.value ** 2 + translateY.value ** 2)
       if (distance < CIRCLE_RADIUS / 2) {
         translateX.value = withSpring(0)
         translateY.value = withSpring(0)
@@ -38,10 +46,7 @@ export const GestureHandlerBasicScreen: FC = () => {
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      transform: [
-        { translateX: translateX.value },
-        { translateY: translateY.value }
-      ]
+      transform: [{ translateX: translateX.value }, { translateY: translateY.value }]
     }
   }, [])
 

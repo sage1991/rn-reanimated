@@ -9,6 +9,7 @@ import Animated, {
 
 const handleRotation = (progress: Animated.SharedValue<number>) => {
   "worklet"
+
   return `${Math.PI * 2 * progress.value}rad`
 }
 
@@ -18,7 +19,7 @@ export const IntroScreen: FC = () => {
   const reanimatedStyle = useAnimatedStyle(() => {
     return {
       opacity: progress.value / 2,
-      borderRadius: progress.value * 100 / 2,
+      borderRadius: (progress.value * 100) / 2,
       transform: [{ scale: progress.value * 2 }, { rotate: handleRotation(progress) }]
     }
   }, [])
@@ -29,7 +30,7 @@ export const IntroScreen: FC = () => {
 
   return (
     <View style={styles.root}>
-      <Animated.View style={[ styles.box, reanimatedStyle ]} />
+      <Animated.View style={[styles.box, reanimatedStyle]} />
     </View>
   )
 }
