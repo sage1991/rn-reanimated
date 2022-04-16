@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   square: {
     width: BOX_SIZE,
     height: BOX_SIZE,
-    backgroundColor: "rgba(0, 0, 256, 0.5)",
+    backgroundColor: "rgba(0, 0, 255, 0.5)",
     borderRadius: 20
   },
   circle: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     height: CIRCLE_RADIUS,
     borderRadius: CIRCLE_RADIUS / 2,
     borderWidth: 5,
-    borderColor: "rgba(0, 0, 256, 0.5)",
+    borderColor: "rgba(0, 0, 255, 0.5)",
     position: "absolute"
   }
 })
