@@ -14,12 +14,13 @@ export const ScrollViewScreen: FC<Props> = (props) => {
   const translateX = useSharedValue<number>(0)
 
   const scrollHandler = useAnimatedScrollHandler((event) => {
-    console.log(event.contentOffset.x)
+    translateX.value = event.contentOffset.x
   })
 
   return (
     <Animated.ScrollView
       horizontal
+      pagingEnabled
       style={styles.root}
       onScroll={scrollHandler}
       scrollEventThrottle={16}
