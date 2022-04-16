@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "rn-reanimated",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
@@ -31,7 +32,7 @@
     "typescript": "~4.3.5"
   },
   "resolutions": {
-    "@types/react": "~17.0.21"
-  },
-  "private": true
+    "@types/react": "~17.0.21",
+    "react-devtools-core": "4.14.0"
+  }
 }
