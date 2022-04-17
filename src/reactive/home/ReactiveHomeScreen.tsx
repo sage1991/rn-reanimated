@@ -24,7 +24,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
     <SafeAreaView style={styles.root}>
       <ScrollView>
         <Button title="intro" onPress={navigateTo("intro")} />
-        <Button title="gesture-handler-basic" onPress={navigateTo("gesture-handler-basic")} />
+        <Button title="pan-gesture-handler" onPress={navigateTo("pan-gesture-handler")} />
         <Button title="scroll-view" onPress={navigateTo("scroll-view")} />
         <Button title="interpolate-colors" onPress={navigateTo("interpolate-colors")} />
       </ScrollView>

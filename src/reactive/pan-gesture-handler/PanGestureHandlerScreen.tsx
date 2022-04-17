@@ -15,7 +15,7 @@ import {
 const BOX_SIZE = 100
 const CIRCLE_RADIUS = Dimensions.get("window").width * 0.9
 
-export const GestureHandlerBasicScreen: FC = () => {
+export const PanGestureHandlerScreen: FC = () => {
   const translateX = useSharedValue<number>(0)
   const translateY = useSharedValue<number>(0)
 

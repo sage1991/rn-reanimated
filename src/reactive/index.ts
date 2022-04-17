@@ -1,5 +1,5 @@
 export * from "./home"
 export * from "./intro"
-export * from "./gesture-handler-basic"
+export * from "./pan-gesture-handler"
 export * from "./scroll-view"
 export * from "./interpolate-colors"
