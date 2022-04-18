@@ -27,6 +27,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
         <Button title="pan-gesture-handler" onPress={navigateTo("pan-gesture-handler")} />
         <Button title="scroll-view" onPress={navigateTo("scroll-view")} />
         <Button title="interpolate-colors" onPress={navigateTo("interpolate-colors")} />
+        <Button title="pinch-gesture-handler" onPress={navigateTo("pinch-gesture-handler")} />
       </ScrollView>
     </SafeAreaView>
   )
