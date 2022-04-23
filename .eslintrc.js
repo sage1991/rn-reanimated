@@ -25,6 +25,8 @@ module.exports = {
     "react/function-component-definition": "off",
     "react/no-array-index-key": "off",
     "react/style-prop-object": "off",
-    "prettier/prettier": "error"
+    "global-require": "off",
+    "prettier/prettier": "error",
+    "no-undef": "off"
   }
 }

@@ -1,9 +1,9 @@
 import React, { FC } from "react"
 import { Button, SafeAreaView, ScrollView, StyleSheet } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
-
 import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
 import { CompositeScreenProps } from "@react-navigation/native"
+
 import {
   HomeNavigationParams,
   ReactiveNavigationParams,
@@ -28,6 +28,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
         <Button title="scroll-view" onPress={navigateTo("scroll-view")} />
         <Button title="interpolate-colors" onPress={navigateTo("interpolate-colors")} />
         <Button title="pinch-gesture-handler" onPress={navigateTo("pinch-gesture-handler")} />
+        <Button title="tap-gesture-handler" onPress={navigateTo("tap-gesture-handler")} />
       </ScrollView>
     </SafeAreaView>
   )
