@@ -8,9 +8,9 @@ import { Page } from "./components"
 
 const WORDS: string[] = ["NICE", "ONE,", "SONNY!", "NICE", "ONE,", "SON!"]
 
-type Props = StackScreenProps<ReactiveNavigationParams, "scroll-view">
+type Props = StackScreenProps<ReactiveNavigationParams, "animated-scroll-view">
 
-export const ScrollViewScreen: FC<Props> = (props) => {
+export const AnimatedScrollViewScreen: FC<Props> = (props) => {
   const translateX = useSharedValue<number>(0)
 
   const scrollHandler = useAnimatedScrollHandler((event) => {

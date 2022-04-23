@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import {
   PanGestureHandlerScreen,
   IntroScreen,
-  ScrollViewScreen,
+  AnimatedScrollViewScreen,
   InterpolateColorsScreen,
   PinchGestureHandlerScreen,
   TapGestureHandlerScreen
@@ -13,7 +13,7 @@ import {
 export type ReactiveNavigationParams = {
   intro: undefined
   "pan-gesture-handler": undefined
-  "scroll-view": undefined
+  "animated-scroll-view": undefined
   "interpolate-colors": undefined
   "pinch-gesture-handler": undefined
   "tap-gesture-handler": undefined
@@ -26,7 +26,7 @@ export const ReactiveNavigation: FC = () => {
     <Stack.Navigator>
       <Stack.Screen name="intro" component={IntroScreen} />
       <Stack.Screen name="pan-gesture-handler" component={PanGestureHandlerScreen} />
-      <Stack.Screen name="scroll-view" component={ScrollViewScreen} />
+      <Stack.Screen name="animated-scroll-view" component={AnimatedScrollViewScreen} />
       <Stack.Screen name="interpolate-colors" component={InterpolateColorsScreen} />
       <Stack.Screen name="pinch-gesture-handler" component={PinchGestureHandlerScreen} />
       <Stack.Screen name="tap-gesture-handler" component={TapGestureHandlerScreen} />
