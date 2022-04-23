@@ -7,7 +7,8 @@ import {
   AnimatedScrollViewScreen,
   InterpolateColorsScreen,
   PinchGestureHandlerScreen,
-  TapGestureHandlerScreen
+  TapGestureHandlerScreen,
+  ScrollViewImplementationScreen
 } from "../../reactive"
 
 export type ReactiveNavigationParams = {
@@ -17,6 +18,7 @@ export type ReactiveNavigationParams = {
   "interpolate-colors": undefined
   "pinch-gesture-handler": undefined
   "tap-gesture-handler": undefined
+  "scroll-view-implementation": undefined
 }
 
 const Stack = createStackNavigator<ReactiveNavigationParams>()
@@ -30,6 +32,7 @@ export const ReactiveNavigation: FC = () => {
       <Stack.Screen name="interpolate-colors" component={InterpolateColorsScreen} />
       <Stack.Screen name="pinch-gesture-handler" component={PinchGestureHandlerScreen} />
       <Stack.Screen name="tap-gesture-handler" component={TapGestureHandlerScreen} />
+      <Stack.Screen name="scroll-view-implementation" component={ScrollViewImplementationScreen} />
     </Stack.Navigator>
   )
 }
