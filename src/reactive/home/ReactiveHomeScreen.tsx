@@ -33,6 +33,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
           title="scroll-view-implementation"
           onPress={navigateTo("scroll-view-implementation")}
         />
+        <Button title="color-picker" onPress={navigateTo("color-picker")} />
       </ScrollView>
     </SafeAreaView>
   )

@@ -27,6 +27,8 @@ module.exports = {
     "react/style-prop-object": "off",
     "global-require": "off",
     "prettier/prettier": "error",
-    "no-undef": "off"
+    "no-undef": "off",
+    "react/jsx-props-no-spreading": "off",
+    "lines-around-directive": "off"
   }
 }
