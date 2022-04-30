@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import { Dimensions, StyleSheet, Text } from "react-native"
 import {
   PanGestureHandler,
