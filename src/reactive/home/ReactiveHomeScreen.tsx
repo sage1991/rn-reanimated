@@ -36,6 +36,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
         />
         <Button title="color-picker" onPress={navigateTo("color-picker")} />
         <Button title="svg-and-text" onPress={navigateTo("svg-and-text")} />
+        <Button title="swipe-to-delete" onPress={navigateTo("swipe-to-delete")} />
       </ScrollView>
     </SafeAreaView>
   )

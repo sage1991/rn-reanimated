@@ -5,31 +5,34 @@
 ## Reactiive
 
 ### intro
-![myimage](src/reactive/intro/preview.gif)
+![preview gif](src/reactive/intro/preview.gif)
 
 ### pan-gesture-handler
-![myimage](src/reactive/pan-gesture-handler/preview.gif)
+![preview gif](src/reactive/pan-gesture-handler/preview.gif)
 
 ### animated-scroll-view
-![myimage](src/reactive/animated-scroll-view/preview.gif)
+![preview gif](src/reactive/animated-scroll-view/preview.gif)
 
 ### interpolate-colors
-![myimage](src/reactive/interpolate-colors/preview.gif)
+![preview gif](src/reactive/interpolate-colors/preview.gif)
 
 ### pinch-gesture-handler
-![myimage](src/reactive/pinch-gesture-handler/preview.gif)
+![preview gif](src/reactive/pinch-gesture-handler/preview.gif)
 
 ### tap-gesture-handler
-![myimage](src/reactive/tap-gesture-handler/preview.gif)
+![preview gif](src/reactive/tap-gesture-handler/preview.gif)
 
 ### scroll-view-implementation
-![myimage](src/reactive/scroll-view-implementation/preview.gif)
+![preview gif](src/reactive/scroll-view-implementation/preview.gif)
 
 ### color-picker
-![myimage](src/reactive/color-picker/preview.gif)
+![preview gif](src/reactive/color-picker/preview.gif)
 
 ### svg-and-text
-![myimage](src/reactive/svg-and-text/preview.gif)
+![preview gif](src/reactive/svg-and-text/preview.gif)
+
+### swipe-to-delete
+![preview gif](src/reactive/swipe-to-delete/preview.gif)
 
 ---------------------------------------------------------------------------
 
