@@ -9,7 +9,8 @@ import {
   PinchGestureHandlerScreen,
   TapGestureHandlerScreen,
   ScrollViewImplementationScreen,
-  ColorPickerScreen
+  ColorPickerScreen,
+  SvgAndTextScreen
 } from "../../reactive"
 
 export type ReactiveNavigationParams = {
@@ -21,6 +22,7 @@ export type ReactiveNavigationParams = {
   "tap-gesture-handler": undefined
   "scroll-view-implementation": undefined
   "color-picker": undefined
+  "svg-and-text": undefined
 }
 
 const Stack = createStackNavigator<ReactiveNavigationParams>()
@@ -36,6 +38,7 @@ export const ReactiveNavigation: FC = () => {
       <Stack.Screen name="tap-gesture-handler" component={TapGestureHandlerScreen} />
       <Stack.Screen name="scroll-view-implementation" component={ScrollViewImplementationScreen} />
       <Stack.Screen name="color-picker" component={ColorPickerScreen} />
+      <Stack.Screen name="svg-and-text" component={SvgAndTextScreen} />
     </Stack.Navigator>
   )
 }

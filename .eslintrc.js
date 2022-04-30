@@ -29,6 +29,7 @@ module.exports = {
     "prettier/prettier": "error",
     "no-undef": "off",
     "react/jsx-props-no-spreading": "off",
-    "lines-around-directive": "off"
+    "lines-around-directive": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }
