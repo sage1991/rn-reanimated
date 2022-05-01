@@ -34,6 +34,9 @@
 ### swipe-to-delete
 ![preview gif](src/reactive/swipe-to-delete/preview.gif)
 
+### ripple
+![preview gif](src/reactive/ripple/preview.gif)
+
 ---------------------------------------------------------------------------
 
 ### 주의사항
