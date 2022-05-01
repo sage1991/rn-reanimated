@@ -6,11 +6,7 @@ import Animated, {
   useSharedValue,
   withSpring
 } from "react-native-reanimated"
-import {
-  GestureHandlerRootView,
-  PanGestureHandler,
-  PanGestureHandlerGestureEvent
-} from "react-native-gesture-handler"
+import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
 
 const BOX_SIZE = 100
 const CIRCLE_RADIUS = Dimensions.get("window").width * 0.9
@@ -51,12 +47,12 @@ export const PanGestureHandlerScreen: FC = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <View style={styles.circle} />
       <PanGestureHandler onGestureEvent={gestureHandler}>
         <Animated.View style={[styles.square, animatedStyle]} />
       </PanGestureHandler>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 

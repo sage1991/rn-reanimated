@@ -1,7 +1,6 @@
 import React, { FC } from "react"
 import { Dimensions, StyleSheet, View } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
-import { GestureHandlerRootView } from "react-native-gesture-handler"
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -32,7 +31,7 @@ export const ColorPickerScreen: FC<Props> = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <View style={styles.previewRoot}>
         <Animated.View style={[styles.preview, animatedStyle]} />
       </View>
@@ -45,7 +44,7 @@ export const ColorPickerScreen: FC<Props> = () => {
           onColorChanged={onColorChanged}
         />
       </View>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 

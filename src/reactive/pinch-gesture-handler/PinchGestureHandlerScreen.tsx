@@ -1,10 +1,6 @@
 import React, { FC } from "react"
-import { StyleSheet } from "react-native"
-import {
-  GestureHandlerRootView,
-  PinchGestureHandler,
-  PinchGestureHandlerGestureEvent
-} from "react-native-gesture-handler"
+import { StyleSheet, View } from "react-native"
+import { PinchGestureHandler, PinchGestureHandlerGestureEvent } from "react-native-gesture-handler"
 import Animated, {
   useAnimatedGestureHandler,
   useAnimatedStyle,
@@ -40,11 +36,11 @@ export const PinchGestureHandlerScreen: FC = () => {
   }, [scale])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <PinchGestureHandler onGestureEvent={pinchHandler}>
         <Animated.Image style={[styles.image, animatedImageStyle]} source={{ uri: IMAGE_URL }} />
       </PinchGestureHandler>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 

@@ -1,7 +1,6 @@
 import React, { FC, useCallback } from "react"
 import { ImageBackground, StyleSheet, View } from "react-native"
 import {
-  GestureHandlerRootView,
   HandlerStateChangeEvent,
   TapGestureHandler,
   TapGestureHandlerEventPayload,
@@ -37,7 +36,7 @@ export const TapGestureHandlerScreen: FC = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <TapGestureHandler
         numberOfTaps={2}
         maxDelayMs={250}
@@ -52,7 +51,7 @@ export const TapGestureHandlerScreen: FC = () => {
           </ImageBackground>
         </View>
       </TapGestureHandler>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 

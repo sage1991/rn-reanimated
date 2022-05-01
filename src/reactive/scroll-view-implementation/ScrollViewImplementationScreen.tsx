@@ -1,11 +1,7 @@
 import React, { FC, useMemo } from "react"
-import { Dimensions, StyleSheet } from "react-native"
+import { Dimensions, StyleSheet, View } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
-import {
-  GestureHandlerRootView,
-  PanGestureHandler,
-  PanGestureHandlerGestureEvent
-} from "react-native-gesture-handler"
+import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
 import Animated, {
   cancelAnimation,
   useAnimatedGestureHandler,
@@ -64,7 +60,7 @@ export const ScrollViewImplementationScreen: FC<Props> = () => {
   }, [minTranslateX])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <PanGestureHandler onGestureEvent={panGestureHandler}>
         <Animated.View style={[styles.scrollRoot, animatedStyle]}>
           {WORDS.map((word, index) => (
@@ -72,7 +68,7 @@ export const ScrollViewImplementationScreen: FC<Props> = () => {
           ))}
         </Animated.View>
       </PanGestureHandler>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 

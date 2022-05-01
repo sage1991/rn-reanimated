@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { Button, ScrollView, StyleSheet } from "react-native"
+import { Button, ScrollView, StyleSheet, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StackScreenProps } from "@react-navigation/stack"
 import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
@@ -37,6 +37,7 @@ export const ReactiveHomeScreen: FC<Props> = (props) => {
         <Button title="color-picker" onPress={navigateTo("color-picker")} />
         <Button title="svg-and-text" onPress={navigateTo("svg-and-text")} />
         <Button title="swipe-to-delete" onPress={navigateTo("swipe-to-delete")} />
+        <Button title="ripple" onPress={navigateTo("ripple")} />
       </ScrollView>
     </SafeAreaView>
   )

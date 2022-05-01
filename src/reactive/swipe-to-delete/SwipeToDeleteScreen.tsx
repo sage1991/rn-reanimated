@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useRef, useState } from "react"
-import { StyleSheet, Text } from "react-native"
-import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler"
+import { StyleSheet, Text, View } from "react-native"
+import { ScrollView } from "react-native-gesture-handler"
 
 import { TaskItem } from "./components"
 
@@ -21,7 +21,7 @@ export const SwipeToDeleteScreen: FC = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView style={styles.root}>
+    <View style={styles.root}>
       <Text style={styles.title}>Task</Text>
       <ScrollView
         ref={scrollRef}
@@ -35,7 +35,7 @@ export const SwipeToDeleteScreen: FC = () => {
           </TaskItem>
         ))}
       </ScrollView>
-    </GestureHandlerRootView>
+    </View>
   )
 }
 
