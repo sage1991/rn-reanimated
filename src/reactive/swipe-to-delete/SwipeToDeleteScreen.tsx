@@ -27,7 +27,6 @@ export const SwipeToDeleteScreen: FC = () => {
         ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.scrollContainer}
-        scrollEnabled
       >
         {tasks.map((task) => (
           <TaskItem key={task} onDismiss={onDismiss} simultaneousHandlers={scrollRef}>
