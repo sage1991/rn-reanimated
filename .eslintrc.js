@@ -30,6 +30,7 @@ module.exports = {
     "no-undef": "off",
     "react/jsx-props-no-spreading": "off",
     "lines-around-directive": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/require-default-props": "off"
   }
 }

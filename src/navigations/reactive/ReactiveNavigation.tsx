@@ -11,7 +11,8 @@ import {
   ScrollViewImplementationScreen,
   ColorPickerScreen,
   SvgAndTextScreen,
-  SwipeToDeleteScreen
+  SwipeToDeleteScreen,
+  RippleScreen
 } from "../../reactive"
 
 export type ReactiveNavigationParams = {
@@ -25,6 +26,7 @@ export type ReactiveNavigationParams = {
   "color-picker": undefined
   "svg-and-text": undefined
   "swipe-to-delete": undefined
+  ripple: undefined
 }
 
 const Stack = createStackNavigator<ReactiveNavigationParams>()
@@ -42,6 +44,7 @@ export const ReactiveNavigation: FC = () => {
       <Stack.Screen name="color-picker" component={ColorPickerScreen} />
       <Stack.Screen name="svg-and-text" component={SvgAndTextScreen} />
       <Stack.Screen name="swipe-to-delete" component={SwipeToDeleteScreen} />
+      <Stack.Screen name="ripple" component={RippleScreen} />
     </Stack.Navigator>
   )
 }
