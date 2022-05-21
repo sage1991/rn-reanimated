@@ -12,8 +12,8 @@ import Animated, {
 import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler"
 import { Dimensions, StyleSheet, View } from "react-native"
 import { Feather } from "@expo/vector-icons"
-
 import { SafeAreaView } from "react-native-safe-area-context"
+
 import { ReactiveNavigationParams } from "../../navigations"
 import { clamp } from "../../utils"
 
