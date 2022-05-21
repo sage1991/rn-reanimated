@@ -12,7 +12,8 @@ import {
   ColorPickerScreen,
   SvgAndTextScreen,
   SwipeToDeleteScreen,
-  RippleScreen
+  RippleScreen,
+  PerspectiveMenuScreen
 } from "../../reactive"
 
 export type ReactiveNavigationParams = {
@@ -27,6 +28,7 @@ export type ReactiveNavigationParams = {
   "svg-and-text": undefined
   "swipe-to-delete": undefined
   ripple: undefined
+  "perspective-menu": undefined
 }
 
 const Stack = createStackNavigator<ReactiveNavigationParams>()
@@ -45,6 +47,11 @@ export const ReactiveNavigation: FC = () => {
       <Stack.Screen name="svg-and-text" component={SvgAndTextScreen} />
       <Stack.Screen name="swipe-to-delete" component={SwipeToDeleteScreen} />
       <Stack.Screen name="ripple" component={RippleScreen} />
+      <Stack.Screen
+        name="perspective-menu"
+        options={{ headerShown: false, cardStyle: { backgroundColor: "#000000" } }}
+        component={PerspectiveMenuScreen}
+      />
     </Stack.Navigator>
   )
 }
