@@ -24,7 +24,9 @@ export const BackgroundGradient: FC<Props> = ({ width, height, padding }) => {
     sharedBlurValue.value = withRepeat(withTiming(20, { duration: 3000 }), -1, true)
   }, [])
 
-  useSharedValueEffect(() => (blur.current = sharedBlurValue.value), sharedBlurValue)
+  useSharedValueEffect(() => {
+    blur.current = sharedBlurValue.value
+  }, sharedBlurValue)
 
   return (
     <Canvas style={{ width, height }}>

@@ -14,13 +14,13 @@ import { Dimensions, StyleSheet, View } from "react-native"
 import { Feather } from "@expo/vector-icons"
 import { SafeAreaView } from "react-native-safe-area-context"
 
-import { ReactiveNavigationParams } from "../../navigations"
+import { NavigationParams } from "../../navigations"
 import { clamp } from "../../utils"
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window")
 const THRESHOLD = SCREEN_WIDTH * 0.3
 
-type Props = StackScreenProps<ReactiveNavigationParams, "perspective-menu">
+type Props = StackScreenProps<NavigationParams, "perspective-menu">
 
 export const PerspectiveMenuScreen: FC<Props> = () => {
   const translateX = useSharedValue(0)

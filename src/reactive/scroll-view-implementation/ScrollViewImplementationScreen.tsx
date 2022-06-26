@@ -10,12 +10,12 @@ import Animated, {
   withDecay
 } from "react-native-reanimated"
 
-import { ReactiveNavigationParams } from "../../navigations"
+import { NavigationParams } from "../../navigations"
 import { Page } from "./components"
 
 const WORDS: string[] = ["NICE", "ONE,", "SONNY!", "NICE", "ONE,", "SON!"]
 
-type Props = StackScreenProps<ReactiveNavigationParams>
+type Props = StackScreenProps<NavigationParams>
 
 export const ScrollViewImplementationScreen: FC<Props> = () => {
   const translateX = useSharedValue<number>(0)

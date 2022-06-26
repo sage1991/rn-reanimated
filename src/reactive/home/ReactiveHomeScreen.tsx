@@ -1,24 +1,15 @@
 import React, { FC } from "react"
-import { Button, ScrollView, StyleSheet, View } from "react-native"
+import { Button, ScrollView, StyleSheet } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StackScreenProps } from "@react-navigation/stack"
-import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
-import { CompositeScreenProps } from "@react-navigation/native"
 
-import {
-  HomeNavigationParams,
-  ReactiveNavigationParams,
-  RootNavigationParams
-} from "../../navigations"
+import { NavigationParams } from "../../navigations"
 
-type Props = CompositeScreenProps<
-  BottomTabScreenProps<HomeNavigationParams, "reactive">,
-  StackScreenProps<RootNavigationParams>
->
+type Props = StackScreenProps<NavigationParams>
 
 export const ReactiveHomeScreen: FC<Props> = (props) => {
-  const navigateTo = (name: keyof ReactiveNavigationParams) => () => {
-    props.navigation.navigate("reactive-stack", { screen: name })
+  const navigateTo = (name: keyof NavigationParams) => () => {
+    props.navigation.navigate(name)
   }
 
   return (

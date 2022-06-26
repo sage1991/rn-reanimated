@@ -7,7 +7,7 @@ import Animated, {
   useWorkletCallback
 } from "react-native-reanimated"
 
-import { ReactiveNavigationParams } from "../../navigations"
+import { NavigationParams } from "../../navigations"
 import { ColorPicker } from "./components"
 
 const COLORS = ["#000000", "#ffffff"]
@@ -15,7 +15,7 @@ const SCREEN_WIDTH = Dimensions.get("window").width
 const PICKER_WIDTH = SCREEN_WIDTH * 0.9
 const PREVIEW_RADIUS = SCREEN_WIDTH * 0.9
 
-type Props = StackScreenProps<ReactiveNavigationParams>
+type Props = StackScreenProps<NavigationParams>
 
 export const ColorPickerScreen: FC<Props> = () => {
   const pickedColor = useSharedValue<string | number>(COLORS[0])
